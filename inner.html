@@ -54,24 +54,46 @@
     </div>
     <h1>Перфораторы</h1>
     <section class="filter">
-      <div class="manufacturers-filter">
-        <h2>Производители:</h2>
-        <ul class="manufactures-list">
-          <li>BOSCH</li>
-          <li>ИНТЕРСКОЛ</li>
-          <li>MAKITA</li>
-          <li>DEWALT</li>
-          <li>HITACHI</li>
-        </ul>
-      </div>
-      <div class="power-supply-filter">
-        <h2>Питание:</h2>
-        <ul class="power-supply-list">
-          <li>Аккумуляторные </li>
-          <li>Сетевые</li>
-        </ul>
-      </div>
-      <button class="filter-result-button">Показать</button>
+      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Производители:</legend>
+          <ul class="manufactures-list">
+            <li>
+              <input type="checkbox" name="bosch" id="filter-bosch">
+              <label for="filter-bosch">BOSCH</label>
+            </li>
+            <li>
+              <input type="checkbox" name="interskol" id="filter-interskol">
+              <label for="filter-interskol">ИНТЕРСКОЛ</label>
+            </li>
+            <li>
+              <input type="checkbox" name="makita" id="filter-makita">
+              <label for="filter-makita">MAKITA</label>
+            </li>
+            <li>
+              <input type="checkbox" name="dewalt" id="filter-dewalt">
+              DEWALT
+            </li>
+            <li>
+              <input type="checkbox" name="hitachi" id="filter-hitachi">
+              <label for="filter-hitachi">HITACHI</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <ul class="power-supply-list">
+            <li><input type="radio" name="power" id="filter-accumulator">
+              Аккумуляторные </li>
+            <li>
+              <input type="radio" name="power" id="filter-network">
+              <label for="filter-network">Сетевые</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" class="filter-result-button">Показать</button>
+      </form>
     </section>
     <section class="catalog">
       <h2 class="visually-hidden">Список перфораторов</h2>
@@ -129,6 +151,12 @@
         </li>
       </ul>
     </section>
+    <section class="modal modal-cart">
+      <h2>Товар добавлен в корзину!</h2>
+      <a class="button" href="#">Оформить заказ</a>
+      <button type="button">Продолжить покупки</button>
+      <button type="button" aria-label="Закрыть"></button>
+    </section>
   </main>
   <footer class="main-footer">
     <a class="main-logo">
@@ -173,7 +201,7 @@
         <a href="#" class="site-development-feedback-link">mail@htmlacademy.ru</a>
       </div>
       <div class="site-development-by"><span>Разработано-</span>
-        <a href="#" class="site-development-by-link">htmlacademy.ru</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="site-development-by-link">htmlacademy.ru</a>
       </div>
     </div>
   </footer>
