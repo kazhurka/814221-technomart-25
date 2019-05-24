@@ -9,8 +9,16 @@ body {
   background-color: #ffffff;
 }
 
+
+
 a {
   text-decoration: none;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .main-header,
@@ -23,16 +31,29 @@ a {
   background-color: #f4f7f9;
 }
 
+.main-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
 .main-header a,
 .inner-header a {
   color: #ffffff;
 }
 
 .place-order {
+  display: flex;
+  margin-bottom: 46px;
   line-height: 18px;
   background-color: #293449;
   color: #ffffff;
 
+
+}
+
+.logo {
+  margin-right: 15px;
 }
 
 .place-order-link {
@@ -90,6 +111,21 @@ a {
   color: #ee3643;
 }
 
+.header-wrapper {
+  display: flex;
+  margin-bottom: 40px;
+  margin-left: 50px;
+}
+
+.header-wrapper h1 {
+  margin-right: 65px;
+
+}
+
+.header-contacts {
+  margin-right: 65px;
+}
+
 .header-contacts-tel {
   font-size: 21px;
   line-height: 21px;
@@ -106,11 +142,17 @@ a {
 
 .user-navigation,
 .site-navigation {
+  margin: 0;
+  padding: 0;
   list-style: none;
+
+}
+
+.site-navigation {
   background-color: #32425c;
 }
 
-.site-navigation .user-navigation a {
+.user-navigation a {
   font-size: 21px;
   line-height: 21px;
   background-color: #ffffff;
@@ -135,6 +177,14 @@ a {
 
 .user-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.main-bottom-wrapper {
+  display: flex;
+}
+
+.company-info {
+  margin-right: 120px;
 }
 
 .company-info h2,
@@ -170,12 +220,27 @@ a {
 }
 
 
+
+
 .main-footer {
   font-family: "Cuprum", Arial, sans-serif;
   background-color: #32425c;
   color: #ffffff;
+  margin-top: 85px;
 }
 
+.footer-top-wrapper {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.footer-bottom {
+  display: flex;
+}
+
+.footer-more-wrapper {
+  margin-right: 65px;
+}
 
 .footer-contacts {
   font-size: 18px;
@@ -199,6 +264,8 @@ a {
 
 .footer-nav-list,
 .footer-nav-list-more {
+  margin: 0;
+  padding: 0;
   list-style: none;
   font-size: 18px;
   line-height: 24px;
@@ -219,8 +286,14 @@ a {
   background-color: #293449;
 }
 
+.footer-copyright-text {
+  margin-right: 160px;
+
+}
+
 .social-list {
   list-style: none;
+  margin-right: 115px;
 }
 
 .social-list a {
