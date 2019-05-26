@@ -10,7 +10,6 @@ body {
 }
 
 
-
 a {
   text-decoration: none;
 }
@@ -158,8 +157,11 @@ a {
 }
 
 .site-navigation {
+  display: flex;
+  justify-content: space-around;
   background-color: #32425c;
 }
+
 
 .user-navigation {
   display: flex;
@@ -397,9 +399,14 @@ user-authorised-wrapper {
 }
 
 .breadcrumbs-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.breadcrumbs-list li {
+  margin-right: 40px;
 }
 
 .breadcrumbs-list a {
