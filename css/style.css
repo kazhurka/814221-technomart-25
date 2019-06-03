@@ -407,6 +407,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation a {
   display: inline-block;
+  vertical-align: middle;
   padding-top: 20px;
   padding-bottom: 23px;
   padding-left: 32px;
@@ -768,11 +769,22 @@ input[type="radio"].visually-hidden {
 }
 
 .inner-header {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  padding-bottom: 50px;
 }
 
 .inner-header .place-order-cart {
   background-color: #ee3643;
+  padding-left: 52px;
+  padding-right: 26px;
+}
+
+.inner-header .header-search-form input {
+  min-height: 40px;
+}
+
+.inner-header .logo-wrapper-header::after {
+  top: 42px;
 }
 
 .user-authorised-wrapper {
@@ -780,7 +792,15 @@ input[type="radio"].visually-hidden {
 }
 
 .user-authorised-navigation {
+  margin: 0;
+  padding: 0;
+  width: 209px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   list-style: none;
+  padding-left: 20px;
+
 }
 
 .user-authorised-navigation a {
@@ -800,18 +820,56 @@ input[type="radio"].visually-hidden {
   color: rgba(50, 66, 92, 0.3);
 }
 
+.user-authorised-name {
+  position: relative;
+
+}
+
+.user-authorised-name::before {
+  position: absolute;
+  top: 13px;
+  left: 16px;
+  content: "";
+  width: 20px;
+  height: 18px;
+  background-image: url("/img/icon-user.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .user-authorised-name a {
+  display: block;
+  width: 186px;
+  padding-left: 50px;
+  padding-right: 69px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  margin-bottom: 8px;
   font-size: 21px;
   line-height: 21px;
   background-color: #ffffff;
   color: #000000;
 }
 
+.user-authorised-name .check-out-link {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 13px;
+  right: 8px;
+  width: 20px;
+  height: 17px;
+  background-image: url("/img/icon-logout.svg");
+}
+
 .user-authorised-name a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
+
+
 .breadcrumbs {
+  background-color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -822,8 +880,10 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
+
 .breadcrumbs-list li {
-  margin-right: 40px;
+  position: relative;
+  margin-right: 41px;
 }
 
 .breadcrumbs-list a {
@@ -831,6 +891,46 @@ input[type="radio"].visually-hidden {
   color: #000000;
   line-height: 18px;
   text-transform: uppercase;
+}
+
+.main-breadcrumbs a::after,
+.catalog-breadcrumbs a::after,
+.tool-breadcrumbs a::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  height: 12px;
+  width: 8px;
+  background-image: url("/img/icon-right-small.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+}
+
+.main-breadcrumbs a::after {
+  top: 0;
+  left: 30px;
+}
+
+.catalog-breadcrumbs a::after {
+  top: 6px;
+  left: 65px;
+}
+
+.tool-breadcrumbs a::after {
+  top: 6px;
+  left: 93px;
+}
+
+.breadcrumbs-list li:first-child {
+  margin-top: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 12px;
+  background-image: url("/img/icon-home.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .inner-page {
@@ -848,8 +948,10 @@ input[type="radio"].visually-hidden {
 }
 
 .inner-page-container h1 {
+  padding-left: 28px;
+  padding-top: 7px;
   font-family: "Cuprum", Arial, sans-serif;
-  font-size: 30px;
+  font-size: 29px;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
@@ -859,12 +961,16 @@ input[type="radio"].visually-hidden {
 .filter {
   width: 220px;
   margin-right: 20px;
+  /* временно */
+  margin-top: 147px;
+  /* временно  */
 }
 
 fieldset {
   border: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 20px;
   list-style: none;
 }
 
@@ -874,7 +980,53 @@ fieldset {
   list-style: none;
 }
 
+
+.manufactures-list li {
+  position: relative;
+  display: block;
+  margin-bottom: 17px;
+  padding-left: 35px;
+}
+
+.manufactures-list label::before {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  background-image: url("/img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 0px;
+  left: 0px;
+}
+
+/* пыталась сделать, чтобы менялся фон у чек боксов при щелчку на инпут, но не работает ((( */
+.manufactures-checkbox:checked+.manufactures-list label::before {
+  background-image: url("/img/checkbox-on.svg");
+}
+
+.power-supply-list li {
+  position: relative;
+  display: block;
+  margin-bottom: 17px;
+  padding-left: 35px;
+}
+
+.power-supply-list label::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("/img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  top: 0px;
+  left: 0px;
+
+}
+
 .filter legend {
+  margin-bottom: 11px;
   font-size: 17px;
   line-height: 30px;
   font-weight: bold;
@@ -890,13 +1042,17 @@ fieldset {
 }
 
 .filter-result-button {
-  font-size: 13px;
+  margin-top: 39px;
+  width: 140px;
+  height: 38px;
+  font-size: 12px;
   line-height: 18px;
   background-color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   vertical-align: middle;
-  border: none;
+  border: solid 1px #e5e5e5;
+  ;
 
 }
 
@@ -907,21 +1063,46 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  /* временно */
+  margin-top: 90px;
+  /* временно */
 }
 
 .catalog-item {
   width: 218px;
-  margin-right: 15px;
+  height: 317px;
+  margin-right: 20px;
   margin-bottom: 20px;
+  border: solid 1px #e5e5e5;
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.catalog-item:nth-child(3n) .catalog-item-current-price {
+  margin-top: 40px;
+
 }
 
 .catalog h3 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 18px;
   font-weight: bold;
   line-height: 20px;
 }
 
 .catalog-item-previous-price {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 75px;
+  padding-right: 75px;
+  margin-bottom: 10px;
+  margin-top: 15px;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
@@ -932,20 +1113,45 @@ fieldset {
 }
 
 .catalog-item-current-price {
+  display: block;
+  ;
+  width: 70px;
+  margin-left: 40px;
+  margin-right: 35px;
+  min-height: 38px;
+  padding-left: 39px;
+  padding-right: 37px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   font-size: 17px;
   font-weight: bold;
   line-height: 18px;
-  background-color: #ee3643;
+  background-image: url(/img/red-button.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
   color: #ffffff;
   text-align: center;
 }
 
 .goods-info {
+  padding-top: 67px;
+  padding-bottom: 70px;
   background-color: #f4f7f9;
+}
+
+.modal-cart {
+  position: relative;
+  width: 620px;
+  margin: 0 auto;
+  min-height: 282px;
+  border-top: 7px solid #ee3643;
+  box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
 }
 
 .goods-info h2,
 .modal-cart h2 {
+  margin: 0;
+  padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -954,8 +1160,61 @@ fieldset {
 
 }
 
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  list-style: none;
+  width: 21px;
+  height: 21px;
+  background-image: url("/img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: white;
+  border: none;
+}
+
+.modal-cart h2 {
+  position: relative;
+  padding-left: 179px;
+  padding-right: 66px;
+  display: block;
+  padding-top: 65px;
+  padding-bottom: 65px;
+  text-transform: none;
+}
+
+.modal-cart h2::before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 64px;
+  width: 66px;
+  height: 66px;
+  background-image: url("/img/icon-mark.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+
+}
+
+.goods-info h2 {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .modal-cart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 122px;
+  width: 100%;
   background-color: #f1f1f1;
+}
+
+.modal-cart-container a {
+  margin-right: 20px;
 }
 
 .continue-button {
