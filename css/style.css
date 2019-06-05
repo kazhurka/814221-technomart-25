@@ -245,6 +245,10 @@ input[type="radio"].visually-hidden {
 
 }
 
+.header-search-form input::placeholder {
+  color: white;
+}
+
 .header-search-form:hover,
 .header-search-form:focus {
   background-color: #212a3a;
@@ -271,6 +275,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header-wrapper h1 {
+  width: 196px;
   display: block;
   margin: 0;
   padding-right: 0;
