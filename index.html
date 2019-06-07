@@ -13,8 +13,9 @@
 
 <body>
   <header class="main-header ">
-    <div class="container">
-      <div class="place-order">
+
+    <div class="place-order">
+      <div class="container">
         <div class="logo-wrapper logo-wrapper-header">
           <img class="logo" src="img/logo-technomart.svg" width="109" height="19" alt=" Логотип магазина Техномарт">
         </div>
@@ -26,12 +27,14 @@
         <a class="place-order-cart" href="#">Корзина: 0</a>
         <a class="place-order-link" href="#">Оформить заказ</a>
       </div>
+    </div>
+    <div class="container">
       <div class="header-wrapper">
         <h1>Интернет-магазин строительных материалов
-          и инструментов для ремонта</h1>
+          и&nbsp;инструментов для ремонта</h1>
         <div class="header-contacts">
           <span class="header-contacts-tel">+7 (812) 555-05-55</span>
-          <span class="header-contacts-address">г.Санкт-Петербург, ул. Б. Конюшенная, д.19/8</span>
+          <span class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
         <ul class="user-navigation">
           <li class="login-link"><a href="#">Войти</a></li>
@@ -52,45 +55,53 @@
       </nav>
     </div>
   </header>
-  <main>
+  <main class="main-page">
     <div class="container">
+
       <section class="easy-access-menu">
         <h2 class="visually-hidden">Меню быстрого доступа</h2>
-        <div class="easy-access-menu-item">
-          <h3>Материалы</h3>
-          <a href="#">На любой вкус</a>
+        <div class="easy-access-top-wrap">
+          <div class="easy-access-menu-item easy-access-menu-materials">
+            <h3>Материалы</h3>
+            <a href="#">На любой вкус</a>
+          </div>
+          <div class="easy-access-menu-item easy-access-menu-tools">
+            <h3>Инструмент</h3>
+            <a href="#">На все случаи</a>
+          </div>
+          <div class="easy-access-menu-item easy-access-menu-technic">
+            <h3>Техника</h3>
+            <a href="#">Для стройки</a>
+          </div>
         </div>
-        <div class="easy-access-menu-item">
-          <h3>Инструмент</h3>
-          <a href="#">На все случаи</a>
-        </div>
-        <div class="easy-access-menu-item">
-          <h3>Техника</h3>
-          <a href="#">Для стройки</a>
-        </div>
-        <div class="easy-access-menu-item">
-          <h3>Скидки 50%</h3>
-          <a href="#"> на 350 товаров</a>
-        </div>
-        <div class="easy-access-menu-item">
-          <h3>Доставка</h3>
-          <a href="#">Бесплатно</a>
-        </div>
-        <div class="slider slider-first">
-          <span>Дрели</span>
-          <span>Соседям на радость!</span>
-          <img src="img/slider.png" width="620" height="266" alt="Реклама дрелей">
-          <button class="slider-button slider-button-back"></button>
-          <button class="slider-button slider-button-forward"></button>
-          <a href="#" class="button slider-open-button">Открыть каталог</a>
-        </div>
-        <div class="slider slider-next">
-          <span>Перфораторы</span>
-          <span>Настоящие мужские игрушки</span>
-          <img src="img/slider_2.png" width="620" height="266" alt="Реклама перфораторов">
-          <button class="slider-button slider-button-back"></button>
-          <button class="slider-button slider-button-forward"></button>
-          <a href="#" class="button slider-open-button">Открыть каталог</a>
+        <div class="easy-access-bottom-wrap">
+          <div class="slider slider-first">
+            <span>Дрели</span>
+            <span>Соседям на радость!</span>
+            <img src="img/slider.png" width="620" height="266" alt="Реклама дрелей">
+            <button class="slider-button slider-button-back"></button>
+            <button class="slider-button slider-button-forward"></button>
+            <a href="#" class="button slider-open-button">Открыть каталог</a>
+          </div>
+          <div class="slider slider-next">
+            <span>Перфораторы</span>
+            <span>Настоящие мужские игрушки</span>
+            <img src="img/slider_2.png" width="620" height="266" alt="Реклама перфораторов">
+            <button class="slider-button slider-button-back"></button>
+            <button class="slider-button slider-button-forward"></button>
+            <a href="#" class="button slider-open-button">Открыть каталог</a>
+          </div>
+          <div class="easy-access-inner-wrap">
+            <div class="easy-access-menu-item easy-access-menu-discount">
+              <h3>Скидки 50%</h3>
+              <a href="#"> на 350 товаров</a>
+            </div>
+            <div class="easy-access-menu-item easy-access-menu-delivery">
+              <h3>Доставка</h3>
+              <a href="#">Бесплатно</a>
+            </div>
+          </div>
+
         </div>
       </section>
       <section class="popular-goods">
