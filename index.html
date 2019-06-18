@@ -8,7 +8,7 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style-mini.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,6 +21,7 @@
         <form class="header-search-form">
           <label><span class="visually-hidden">Поиск:</span><input type="text" name="search"
               placeholder="Поиск:"></label>
+          <button class="header-search-button" type="submit"></button>
         </form>
         <a class="place-order-bookmarks" href="#">Закладки: 0</a>
         <a class="place-order-cart" href="#">Корзина: 0</a>
@@ -73,14 +74,14 @@
         </div>
         <div class="easy-access-bottom-wrap">
           <div class="index-sliders">
+            <button class="slider-button slider-button-back"></button>
+            <button class="slider-button slider-button-forward"></button>
+            <button class="slider-switch "></button>
+            <button class="slider-switch slider-switch-next slider-switch-active "></button>
             <div class="slider slider-first">
               <span>Дрели</span>
               <span>Соседям на радость!</span>
               <img src="img/slider.png" width="620" height="266" alt="Реклама дрелей">
-              <button class="slider-button slider-button-back"></button>
-              <button class="slider-button slider-button-forward"></button>
-              <button class="slider-switch "></button>
-              <button class="slider-switch slider-switch-next slider-switch-active "></button>
               <a href="#" class="button slider-open-button">Открыть каталог</a>
             </div>
             <div class="slider slider-next">
@@ -88,8 +89,7 @@
               <span>Настоящие мужские игрушки</span>
               <img src="img/slider_2.png" width="620" height="266" alt="Реклама перфораторов">
               <a href="#" class="button slider-open-button">Открыть каталог</a>
-              <button class="slider-button slider-button-back"></button>
-              <button class="slider-button slider-button-forward"></button>
+
             </div>
           </div>
           <div class="easy-access-inner-wrap">
@@ -183,7 +183,7 @@
           Хороший интернет-магазин отличается от плохого не только ценами!
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
-        <div class="services-item-container services-item-container-active">
+        <div class="services-item-container">
           <div class="services-buttons">
             <div><button class="button services-button services-button-active">Доставка</button></div>
             <div><button class="button services-button">Гарантия</button></div>
@@ -198,13 +198,6 @@
               поднимая его на ваш этаж!
             </p>
           </div>
-        </div>
-        <div class="services-item-container ">
-          <div class="services-buttons">
-            <div><button class="button services-button services-button-active">Доставка</button></div>
-            <div><button class="button services-button">Гарантия</button></div>
-            <div><button class="button services-button">Кредит</button></div>
-          </div>
           <div class="services-item services-item-guarantee">
             <h3>Гарантия</h3>
             <p>
@@ -215,13 +208,6 @@
               обменяем сгоревший товар на новый.<br>
               Дом уж восстановите как-нибудь сами.
             </p>
-          </div>
-        </div>
-        <div class="services-item-container ">
-          <div class="services-buttons">
-            <div><button class="button services-button services-button-active">Доставка</button></div>
-            <div><button class="button services-button">Гарантия</button></div>
-            <div><button class="button services-button">Кредит</button></div>
           </div>
           <div class="services-item services-item-credit">
             <h3>Кредит</h3>
@@ -255,7 +241,8 @@
           заехав в наш офис:
         </p>
         <div class="map">
-          <a href="https://yandex.ru/maps"><img src="img/map.png" alt="Схема проезда"></a>
+          <a href="https://goo.gl/maps/1BSmqQnkC8MqK4wu6" class="map-index"><img src="img/map.png"
+              alt="Схема проезда"></a>
         </div>
         <a href="form.html" class="button main-contacts-link">Заблудились? Напишите нам!</a>
       </section>
@@ -334,15 +321,18 @@
   </footer>
   <section class="modal-map">
     <h2 class="visually-hidden">Карта</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533261!2d30.320858716070592!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560860577841!5m2!1sru!2sru"
+      width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
     <button class="button close-button"></button>
   </section>
-  <section class="modal-write-us ">
+  <section class="modal-write-us">
     <h2 class="visually-hidden">Напишите нам:</h2>
-    <form class="write-us">
+    <form class="write-us" method="get" action="https://echo.htmlacademy.ru">
       <div class="modal-top-container">
         <p>
           <label for="user-name">Ваше имя:</label>
-          <input type="text" name="name" id="user-name" placeholder="Имя Фамилия">
+          <input class="user-name" type="text" name="name" id="user-name" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="user-e-mail">Ваш e-mail:</label>
@@ -350,16 +340,76 @@
         </p>
         <p class="write-us-text-area">
           <label for="user-letter">Текст письма:</label>
-          <textarea name="letter" id="user-letter" placeholder="В свободной форме">
-          </textarea>
+          <textarea name="letter" id="user-letter">В свободной форме</textarea>
         </p>
       </div>
       <div class="modal-bottom-container">
-        <button class="button send-button">Отправить</button>
+        <button type="submit" class="button send-button">Отправить</button>
         <button type="button" class="close-button" aria-label="Закрыть"></button>
       </div>
     </form>
   </section>
+  <script>
+    var mapLink = document.querySelector(".map-index");
+    var mapPopup = document.querySelector(".modal-map");
+    var mapClose = mapPopup.querySelector(".close-button");
+    var indexLink = document.querySelector(".main-contacts-link");
+    var indexPopup = document.querySelector(".modal-write-us");
+    var indexClose = indexPopup.querySelector(".close-button");
+    var form = indexPopup.querySelector(".write-us");
+    var name = indexPopup.querySelector(".user-name");
+    var email = indexPopup.querySelector(".user-e-mail");
+    var letter = indexPopup.querySelector("textarea");
+
+
+    mapLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.add("modal-show");
+
+    });
+
+    mapClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      evt.preventDefault();
+      if (evt.keyCode === 27) {
+        if (mapPopup.classList.contains("modal-show")) {
+          mapPopup.classList.remove("modal-show");
+        }
+      }
+    });
+    indexLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      indexPopup.classList.add("modal-show");
+      name.focus();
+    });
+
+    indexClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      indexPopup.classList.remove("modal-show");
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      evt.preventDefault();
+      if (evt.keyCode === 27) {
+        if (indexPopup.classList.contains("modal-show")) {
+          indexPopup.classList.remove("modal-show");
+        }
+      }
+    });
+
+    form.addEventListener("submit", function (evt) {
+      if (!name.value || !email.value) {
+        evt.preventDefault();
+        console.log("Нужно ввести имя и email");
+      }
+    });
+
+  </script>
+
 </body>
 
 </html>
