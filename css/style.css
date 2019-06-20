@@ -269,7 +269,7 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
-.header-search-form input:focus+.header-search-button {
+.header-search-button svg:active {
   fill: #ee3643;
 }
 
